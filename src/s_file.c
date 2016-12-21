@@ -287,6 +287,36 @@ static void sys_donesavepreferences( void)
 
 #endif /* __APPLE__ */
 
+#ifdef EMSCRIPTEN
+
+// TODO: Implement if necessary
+
+static void sys_initloadpreferences( void)
+{
+}
+
+static int sys_getpreference(const char *key, char *value, int size)
+{
+    return 0;
+}
+
+static void sys_doneloadpreferences( void)
+{
+}
+
+static void sys_initsavepreferences( void)
+{
+}
+
+static void sys_putpreference(const char *key, const char *value)
+{
+}
+
+static void sys_donesavepreferences( void)
+{
+}
+
+#endif /* EMSCRIPTEN */
 
 void sys_loadpreferences( void)
 {
